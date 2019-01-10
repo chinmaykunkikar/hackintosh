@@ -129,8 +129,43 @@ After selecting the newly introduced Dark theme option in macOS, the dark Desert
 
 ---
 
+##### A list of kexts used under `/CLOVER/kexts/other/`:
+
+```text
+1. FakeSMC.kext
+2. SATA-unsupported.kext
+3. USBInjectAll.kext
+4. VoodooPS2Controller.kext
+5. WhateverGreen.kext
+6. Lilu.kext
+```
+
+##### The contents of `/CLOVEER/drivers64UEFI/`:
+
+```text
+1. ApfsDriverLoader-64.efi
+2. AppleImageLoader-64.efi
+3. AptioMemoryFix-64.efi
+4. DataHubDxe-64.efi
+5. FSInject-64.efi
+6. HFSPlus.efi
+7. SMCHelper-64.efi
+```
+
+##### List of kexts installed by me under `/Library/Extensions/`:
+
+```text
+1. ACPIBatteryManager.kext - Fixes battery indicator.
+2. AppleALC.kext - Required for audio fix.
+3. CodecCommander.kext - Required for audio fix. (Custom Info.plist - https://drive.google.com/open?id=1VbzI66V8zsRa1STRAnHqMZbWtQGlrjeG).
+4. FakePCIID_Intel_HD_Graphics.kext - Not sure if it is required.
+5. Lilu.kext - should be under `/EFI` partition, but I’ve kept it with `AppleALC`.
+```
+
+---
+
 ### Lessons Learned
 
-* I should definatly start reading the documentation more carefully and thoroughly. Doing so would have saved around three days duing the `Hackintosh Project`.
+* I should definatly start reading the documentation more carefully and thoroughly. Doing so would have saved around three days duing the 'Hackintosh Project'.
 * Booting and fixing Hackintosh was even more thrilling experience than installing and setting up Arch Linux.
 * Hackintosh is very similar to Android ROMs. Each and every device has it's specific `Kernels`, `Frameworks`, `Device Trees`, `Vendors`. In Hackintosh, every build is very specific. This is in contrast to Windows and Linux where drivers can easily be found and installed (Windows) and where the kernel has all the necessary and popular drivers (Linux). macOS kernels are modular. They exclusively use extensions called `kexts` to kind of "patch" the kernel on the fly. Interesting.
